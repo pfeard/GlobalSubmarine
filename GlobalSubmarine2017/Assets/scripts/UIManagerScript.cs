@@ -7,70 +7,48 @@ public class UIManagerScript : MonoBehaviour {
 	
 	public string post;
 	public PlayerBehavior player;
+	public GameObject textBox;
 
-	public void ChoseRadar() 
+	
+	void Start () {
+		textBox.SetActive(false);
+		player = PlayerMgr.Instance.GetMyPlayer();
+		player._onNextTurn = onNextTurn;
+		player._Conflict = Conflict;
+	}
+	
+	public void ChooseRadar() 
 	{
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player.m_CurrentActivity = 0;
 		player.m_CurrentState = 0;
 		player.SetReady();
-		post = "Radar";
-		if(PlayerMgr.Instance.IsEveryoneReady())
-		{
-			StartRound();
-		}		
+		post = "Radar";	
 	}
-	public void ChosePilot() 
+	public void ChoosePilot() 
 	{
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player.m_CurrentActivity = 1;
 		player.m_CurrentState = 0;
 		player.SetReady();
 		post = "Pilot";
-		if(PlayerMgr.Instance.IsEveryoneReady())
-		{
-			StartRound();
-		}
 	}
-	public void ChoseEngine() 
+	public void ChooseEngine() 
 	{
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player.m_CurrentActivity = 2;
 		player.m_CurrentState = 0;
 		player.SetReady();
 		post = "Engine";
-		if(PlayerMgr.Instance.IsEveryoneReady())
-		{
-			StartRound();
-		}
-	}
-	public void ChoseBedroom() 
-	{
-		player = PlayerMgr.Instance.GetMyPlayer();
-		player.m_CurrentActivity = 3;
-		player.m_CurrentState = 0;
-		player.SetReady();
-		post = "Bedroom";
-		if(PlayerMgr.Instance.IsEveryoneReady())
-		{
-			StartRound();
-		}
-	}
-	public void ChoseRadio() 
-	{
-		player = PlayerMgr.Instance.GetMyPlayer();
-		player.m_CurrentActivity = 4;
-		player.m_CurrentState = 0;
-		player.SetReady();
-		post = "Radio";
-		if(PlayerMgr.Instance.IsEveryoneReady())
-		{
-			StartRound();
-		}
 	}
 	
-	public void StartRound()
+	void onNextTurn()
 	{
 		SceneManager.LoadScene(post);
+	}
+	
+	void Conflict()
+	{
+		textBox.SetActive(true);
 	}
 }

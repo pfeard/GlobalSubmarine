@@ -9,6 +9,12 @@ public class PlayerBehavior : NetworkBehaviour
     public int m_CurrentState;
 
     public bool m_ReadyForNextTurn = false;
+	public bool m_NoConflict = false;
+	public bool m_AmReady = false;
+	public delegate void onNextTurn();
+	public onNextTurn _onNextTurn;
+	public delegate void Conflict();
+	public Conflict _Conflict;
 
     // Use this for initialization
     void Start ()
@@ -65,6 +71,10 @@ public class PlayerBehavior : NetworkBehaviour
     void RpcNextTurn()
     {
         m_ReadyForNextTurn = false;
+		if(_onNextTurn!=null)
+		{
+			_onNextTurn();
+		}
     }
 
     public void FailedTurn()
@@ -78,5 +88,9 @@ public class PlayerBehavior : NetworkBehaviour
     void RpcFailedTurn()
     {
         m_ReadyForNextTurn = false;
+		if(_Conflict!=null)
+		{
+			_Conflict();
+		}
     }
 }
