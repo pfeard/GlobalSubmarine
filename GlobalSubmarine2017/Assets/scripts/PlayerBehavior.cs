@@ -39,6 +39,8 @@ public class PlayerBehavior : NetworkBehaviour
 
         if (PlayerMgr.Instance)
             PlayerMgr.Instance.AddPlayer(this);
+
+        DontDestroyOnLoad(this);
     }
 
     public override void OnNetworkDestroy()

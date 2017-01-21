@@ -46,7 +46,7 @@ public class PlayerMgr : Singleton<PlayerMgr>
     {
         foreach (PlayerBehavior player in m_Players)
         {
-            if (player.isLocalPlayer)
+            if (player && player.isLocalPlayer)
                 return player;
         }
 

@@ -10,7 +10,8 @@ public class UIManagerScript : MonoBehaviour {
 	public GameObject textBox;
 
 	
-	void Start () {
+	void Start ()
+    {
 		textBox.SetActive(false);
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player._onNextTurn = onNextTurn;
