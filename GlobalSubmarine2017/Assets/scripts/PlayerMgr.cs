@@ -41,15 +41,45 @@ public class PlayerMgr : Singleton<PlayerMgr>
         return null;
     }
 
+    public PlayerBehavior GetPlayer(int i)
+    {
+        if (i < m_Players.Count)
+            return m_Players[i];
+
+        return null;
+    }
+
+    public int GetPlayerCount()
+    {
+        return m_Players.Count;
+    }
+
     public bool IsEveryoneReady()
+    {
+        bool isReady = true;
+
+        foreach (PlayerBehavior player in m_Players)
+        {
+            if (player.m_ReadyForNextTurn == false)
+                isReady = false;
+        }
+
+        return isReady;
+    }
+
+    public void CancelTurn()
     {
         foreach (PlayerBehavior player in m_Players)
         {
-            if (!player.m_ReadyForNextTurn)
-			{
-				return false;
-			}
+            player.FailedTurn();
         }
-		return true;
+    }
+
+    public void NextTurn()
+    {
+        foreach (PlayerBehavior player in m_Players)
+        {
+            player.NextTurn();
+        }
     }
 }

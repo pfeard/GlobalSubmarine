@@ -55,6 +55,11 @@ public class PlayerBehavior : NetworkBehaviour
         m_ReadyForNextTurn = true;
     }
 
+    public void NextTurn()
+    {
+        m_ReadyForNextTurn = false;
+        RpcNextTurn();
+    }
 
     [ClientRpc]
     void RpcNextTurn()
@@ -62,10 +67,16 @@ public class PlayerBehavior : NetworkBehaviour
         m_ReadyForNextTurn = false;
     }
 
+    public void FailedTurn()
+    {
+        m_ReadyForNextTurn = false;
+        RpcFailedTurn();
+    }
+
     // Called when several people chose the same activity
     [ClientRpc]
     void RpcFailedTurn()
     {
-
+        m_ReadyForNextTurn = false;
     }
 }
