@@ -17,11 +17,117 @@ Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Ne
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.045 seconds
+- Completed reload, in  0.049 seconds
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.641700 ms
+UnloadTime: 1.529201 ms
+[Singleton] An instance of TurnMgr is needed in the scene, so '(singleton) TurnMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+  Thread -> id: 1fe4 -> priority: 1 
+UnloadTime: 0.303550 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 0.359603 ms (FindLiveObjects: 0.033552 ms CreateObjectMapping: 0.027631 ms MarkObjects: 0.285787 ms  DeleteObjects: 0.011842 ms)
+
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660M (ID=0xfd4)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+    Driver:   9.18.13.4475
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.033 seconds
+Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.581700 ms
+[Singleton] An instance of TurnMgr is needed in the scene, so '(singleton) TurnMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2674 -> priority: 1 
+UnloadTime: 0.301971 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 310.
+Total: 0.348155 ms (FindLiveObjects: 0.033947 ms CreateObjectMapping: 0.024868 ms MarkObjects: 0.278287 ms  DeleteObjects: 0.010657 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.136816 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 331.
+Total: 0.319340 ms (FindLiveObjects: 0.026052 ms CreateObjectMapping: 0.017368 ms MarkObjects: 0.260524 ms  DeleteObjects: 0.013815 ms)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Local Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.505498 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 331.
+Total: 0.294471 ms (FindLiveObjects: 0.026052 ms CreateObjectMapping: 0.016973 ms MarkObjects: 0.243156 ms  DeleteObjects: 0.007894 ms)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Local Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized fileU now londldo 0d
+ing 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTimme : .01.5917ms
+2 ms
+
+Unloaading 11 unuunused Assetto reduce memory usage. Loaoaded jects now:o :334.
+
+Total: 0.384076  sm(FindLiveObjects: s: 05845249ms CrCeeateebjejtMappang: 0g0:4 70 ms2Ma2kO3j cts Mar.kObjec ms  0.294471 ms  De0.016973 ms: 0
+.
+019341 ms)
+

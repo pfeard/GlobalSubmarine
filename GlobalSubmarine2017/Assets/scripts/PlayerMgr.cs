@@ -79,22 +79,35 @@ public class PlayerMgr : Singleton<PlayerMgr>
         return isReady;
     }
 
-    public void CancelTurn()
+    public void StartTurn()
+    {
+        foreach (PlayerBehavior player in m_Players)
+        {
+            player.StartTurn();
+        }
+    }
+
+    public void EndTurn()
+    {
+        foreach (PlayerBehavior player in m_Players)
+        {
+            player.EndTurn();
+        }
+    }
+
+    /*public void CancelTurn()
     {
         foreach (PlayerBehavior player in m_Players)
         {
             player.FailedTurn();
         }
-    }
+    }*/
 
-    public void NextTurn(int Food, int Speed, int Distance)
+    /*public void NextTurn()
     {
         foreach (PlayerBehavior player in m_Players)
         {
-            player.RpcCurrentFood(Food);
-            player.RpcCurrentSpeed(Speed);
-            player.RpcCurrentDistance(Distance);
             player.NextTurn();
         }
-    }
+    }*/
 }

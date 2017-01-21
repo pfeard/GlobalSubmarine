@@ -5,20 +5,28 @@ using UnityEngine.Networking;
 
 public class PlayerBehavior : NetworkBehaviour
 {
-    public int m_CurrentFood;
+    /*public int m_CurrentFood;
     public int m_CurrentSpeed;
-    public int m_CurrentDistance;
+    public int m_CurrentDistance;*/
 
     public int m_CurrentActivity;
-    public int m_CurrentState;
+    //public int m_CurrentState;
 
     public bool m_ReadyForNextTurn = false;
 	public bool m_NoConflict = false;
 	public bool m_AmReady = false;
-	public delegate void onNextTurn();
-	public onNextTurn _onNextTurn;
-	public delegate void Conflict();
-	public Conflict _Conflict;
+
+	public delegate void onTurnStart();
+	public onTurnStart _onTurnStart;
+
+    public delegate void onTurnEnd();
+    public onTurnEnd _onTurnEnd;
+
+    public delegate void onPostSelected(int PostId);
+    public onPostSelected _onPostSelected;
+
+    /*public delegate void Conflict();
+	public Conflict _Conflict;*/
 
     // Use this for initialization
     void Start ()
@@ -49,75 +57,64 @@ public class PlayerBehavior : NetworkBehaviour
             PlayerMgr.Instance.RemovePlayer(this);
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-	}
-
     // Local SetReady
     public void SetReady()
     {
-        m_ReadyForNextTurn = true;
-        CmdSetReady(m_CurrentActivity, m_CurrentState);
+        CmdSetReady(m_CurrentActivity);
     }
 
     // Only called on server
     [Command]
-    void CmdSetReady(int Activity, int State)
+    void CmdSetReady(int Activity)
     {
-        m_CurrentState = State;
-        m_CurrentActivity = Activity;
+        TurnMgr.Instance.SetActivity(this, Activity);
+    }
+
+    public void ValidateActivity()
+    {
+        m_ReadyForNextTurn = true;
+
+        RpcValidateActivity();
+    }
+
+    [ClientRpc]
+    void RpcValidateActivity()
+    {
         m_ReadyForNextTurn = true;
     }
 
-    public void NextTurn()
+    public void StartTurn()
+    {
+        RpcStartTurn();
+    }
+
+    [ClientRpc]
+    void RpcStartTurn()
+    {
+        if (_onTurnStart != null)
+        {
+            _onTurnStart();
+        }
+    }
+
+    public void EndTurn()
     {
         m_ReadyForNextTurn = false;
-        RpcNextTurn();
+        m_CurrentActivity = -1;
+
+        RpcEndTurn();
     }
 
     [ClientRpc]
-    void RpcNextTurn()
+    void RpcEndTurn()
     {
         m_ReadyForNextTurn = false;
-		if(_onNextTurn!=null)
-		{
-			_onNextTurn();
-		}
+        m_CurrentActivity = -1;
+
+        if (_onTurnEnd != null)
+        {
+            _onTurnEnd();
+        }
     }
 
-    public void FailedTurn()
-    {
-        m_ReadyForNextTurn = false;
-        RpcFailedTurn();
-    }
-
-    // Called when several people chose the same activity
-    [ClientRpc]
-    void RpcFailedTurn()
-    {
-        m_ReadyForNextTurn = false;
-		if(_Conflict!=null)
-		{
-			_Conflict();
-		}
-    }
-
-    [ClientRpc]
-    public void RpcCurrentFood(int Value)
-    {
-        m_CurrentFood = Value;
-    }
-
-    [ClientRpc]
-    public void RpcCurrentDistance(int Value)
-    {
-        m_CurrentDistance = Value;
-    }
-
-    [ClientRpc]
-    public void RpcCurrentSpeed(int Value)
-    {
-        m_CurrentSpeed = Value;
-    }
 }
