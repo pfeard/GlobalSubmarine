@@ -9,8 +9,8 @@ public class TurnMgr : Singleton<TurnMgr>
         eA = 0,
         eB,
         eC,
-        eD,
-        eE,
+        //eD,
+        //eE,
         eActivityCount
     }
 
@@ -66,7 +66,7 @@ public class TurnMgr : Singleton<TurnMgr>
 	// Update is called once per frame
 	void Update ()
     {
-		if (PlayerMgr.Instance.GetMyPlayer())
+		if (PlayerMgr.Instance && PlayerMgr.Instance.GetMyPlayer())
         {
             if (PlayerMgr.Instance.GetMyPlayer().isServer)
             {
@@ -80,7 +80,7 @@ public class TurnMgr : Singleton<TurnMgr>
                     {
                         ManageResources();
                         ManageSpeed();
-                        PlayerMgr.Instance.NextTurn();
+                        PlayerMgr.Instance.NextTurn(m_CurrentFoodAmount, m_CurrentSpeed, m_CurrentDistance);
                     }
                 }
             }
@@ -117,6 +117,8 @@ public class TurnMgr : Singleton<TurnMgr>
 
     void ManageResources()
     {
+        m_CurrentSpeed = 5;
+
         for (int i = 0; i < (int)EActivities.eActivityCount; i++)
         {
             bool activityOK = false;
@@ -139,6 +141,7 @@ public class TurnMgr : Singleton<TurnMgr>
             if (!activityOK)
             {
                 m_FoodCostForStateChange[i] += 1;
+                m_CurrentSpeed--;
             }
 
             if (m_PreviousStates[i] != m_CurrentStates[i])

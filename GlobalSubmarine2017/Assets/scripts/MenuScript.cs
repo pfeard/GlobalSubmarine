@@ -6,7 +6,23 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class MenuScript : MonoBehaviour
 {
-  void OnGUI()
+    public void OnCreateGame()
+    {
+        PlayerPrefs.SetString("IsHost", "True");
+        SceneManager.LoadScene("Lobby");
+    }
+
+    public void OnJoinGame()
+    {
+        PlayerPrefs.SetString("IsHost", "False");
+        SceneManager.LoadScene("Lobby");
+    }
+
+    public void OnQuit()
+    {
+        Application.Quit();
+    }
+  /*void OnGUI()
   {
     const int buttonWidth = 84;
     const int buttonHeight = 60;
@@ -47,6 +63,6 @@ public class MenuScript : MonoBehaviour
 		PlayerPrefs.SetString("IsHost", "False");
         SceneManager.LoadScene("Lobby");
     }
-  }
+  }*/
 }
 

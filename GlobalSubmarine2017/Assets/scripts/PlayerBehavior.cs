@@ -5,6 +5,10 @@ using UnityEngine.Networking;
 
 public class PlayerBehavior : NetworkBehaviour
 {
+    public int m_CurrentFood;
+    public int m_CurrentSpeed;
+    public int m_CurrentDistance;
+
     public int m_CurrentActivity;
     public int m_CurrentState;
 
@@ -33,16 +37,19 @@ public class PlayerBehavior : NetworkBehaviour
             Debug.Log("Remote Player");
         }
 
-        PlayerMgr.Instance.AddPlayer(this);
+        if (PlayerMgr.Instance)
+            PlayerMgr.Instance.AddPlayer(this);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    public override void OnNetworkDestroy()
     {
-		if (isLocalPlayer)
-        {
-            
-        }
+        if (PlayerMgr.Instance)
+            PlayerMgr.Instance.RemovePlayer(this);
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
 	}
 
     // Local SetReady
@@ -92,5 +99,23 @@ public class PlayerBehavior : NetworkBehaviour
 		{
 			_Conflict();
 		}
+    }
+
+    [ClientRpc]
+    public void RpcCurrentFood(int Value)
+    {
+        m_CurrentFood = Value;
+    }
+
+    [ClientRpc]
+    public void RpcCurrentDistance(int Value)
+    {
+        m_CurrentDistance = Value;
+    }
+
+    [ClientRpc]
+    public void RpcCurrentSpeed(int Value)
+    {
+        m_CurrentSpeed = Value;
     }
 }

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerMgr : Singleton<PlayerMgr>
 {
+    static int sPlayerCount = 3;
     public List<PlayerBehavior> m_Players;
     public UnityEngine.UI.Image[] m_POk;
 
     protected PlayerMgr()
     {
-        m_POk = new UnityEngine.UI.Image[4];
+        m_POk = new UnityEngine.UI.Image[sPlayerCount];
         m_Players = new List<PlayerBehavior>();
     }
     
@@ -17,13 +18,23 @@ public class PlayerMgr : Singleton<PlayerMgr>
     {
         m_Players.Add(player);
 
-        if (m_Players.Count < 4)
+        if (m_Players.Count < sPlayerCount)
         {
             if (m_POk[m_Players.Count - 1] != null)
             {
                 m_POk[m_Players.Count - 1].color = new Color(0.0f, 1.0f, 0.0f);
             }
         }
+    }
+
+    public void RemovePlayer(PlayerBehavior player)
+    {
+        if (m_POk[m_Players.Count - 1] != null)
+        {
+            m_POk[m_Players.Count - 1].color = new Color(1.0f, 0.0f, 0.0f);
+        }
+
+        m_Players.Remove(player);
     }
 
     public void ClearPlayers()
@@ -76,10 +87,13 @@ public class PlayerMgr : Singleton<PlayerMgr>
         }
     }
 
-    public void NextTurn()
+    public void NextTurn(int Food, int Speed, int Distance)
     {
         foreach (PlayerBehavior player in m_Players)
         {
+            player.RpcCurrentFood(Food);
+            player.RpcCurrentSpeed(Speed);
+            player.RpcCurrentDistance(Distance);
             player.NextTurn();
         }
     }
