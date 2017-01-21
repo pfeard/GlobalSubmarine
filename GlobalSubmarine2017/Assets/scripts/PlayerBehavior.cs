@@ -8,7 +8,7 @@ public class PlayerBehavior : NetworkBehaviour
     public int m_CurrentActivity;
     public int m_CurrentState;
 
-    bool m_ReadyForNextTurn = false;
+    public bool m_ReadyForNextTurn = false;
 
     // Use this for initialization
     void Start ()

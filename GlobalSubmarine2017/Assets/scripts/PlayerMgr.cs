@@ -43,11 +43,13 @@ public class PlayerMgr : Singleton<PlayerMgr>
 
     public bool IsEveryoneReady()
     {
-        bool isReady = true;
-
         foreach (PlayerBehavior player in m_Players)
         {
-            if (player.is)
+            if (!player.m_ReadyForNextTurn)
+			{
+				return false;
+			}
         }
+		return true;
     }
 }
