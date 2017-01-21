@@ -17,30 +17,23 @@ Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Ne
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
+- Completed reload, in  0.033 seconds
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.376833 ms
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.569069 ms
 Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2214 -> priority: 1 
-UnloadTime: 0.305919 ms
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
     Renderer: NVIDIA GeForce GTX 660M (ID=0xfd4)
     Vendor:   NVIDIA
     VRAM:     1990 MB
     Driver:   9.18.13.4475
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 247.
-Total: 0.212367 ms (FindLiveObjects: 0.034736 ms CreateObjectMapping: 0.018947 ms MarkObjects: 0.142104 ms  DeleteObjects: 0.015789 ms)
-
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -52,65 +45,28 @@ Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Ne
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.042 seconds
+- Completed reload, in  0.050 seconds
+Setting up 1 worker threads for Enlighten.
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.dll (this message is harmless)
+  Thread -> id: 2f38 -> priority: 1 
+UnloadTime: 22.862228 ms
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.331971 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 324.
-Total: 0.412892 ms (FindLiveObjects: 0.032762 ms CreateObjectMapping: 0.027631 ms MarkObjects: 0.338682 ms  DeleteObjects: 0.012236 ms)
-
-[Singleton] Using instance already created: PlayerMgr
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-I am the server
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Local Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 249.
+Total: 26.037865 ms (FindLiveObjects: 0.026841 ms CreateObjectMapping: 0.018157 ms MarkObjects: 25.975103 ms  DeleteObjects: 0.016973 ms)
 
 <RI> Initialized touch support.
-UnloadTime: 1.689857 ms
+UnloadTime: 1.341307 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1dd4 -> priority: 1 
-UnloadTime: 0.293287 ms
+  Thread -> id: 2880 -> priority: 1 
+UnloadTime: 0.240787 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 247.
-Total: 1.316833 ms (FindLiveObjects: 0.017763 ms CreateObjectMapping: 0.011447 ms MarkObjects: 1.278544 ms  DeleteObjects: 0.008684 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.246314 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 324.
-Total: 0.298813 ms (FindLiveObjects: 0.044999 ms CreateObjectMapping: 0.016973 ms MarkObjects: 0.227367 ms  DeleteObjects: 0.008684 ms)
-
-[Singleton] Using instance already created: PlayerMgr
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-I am the server
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Local Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 249.
+Total: 5.844437 ms (FindLiveObjects: 0.027236 ms CreateObjectMapping: 0.021315 ms MarkObjects: 5.781674 ms  DeleteObjects: 0.013815 ms)
 
 Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
@@ -131,55 +87,21 @@ Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Ne
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.034 seconds
+- Completed reload, in  0.031 seconds
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.108671 ms
+UnloadTime: 1.477490 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2884 -> priority: 1 
-UnloadTime: 0.318550 ms
+  Thread -> id: 254c -> priority: 1 
+UnloadTime: 0.258945 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 247.
-Total: 6.100620 ms (FindLiveObjects: 0.027236 ms CreateObjectMapping: 0.023289 ms MarkObjects: 6.033120 ms  DeleteObjects: 0.015789 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.252235 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 324.
-Total: 0.295261 ms (FindLiveObjects: 0.046183 ms CreateObjectMapping: 0.016973 ms MarkObjects: 0.223024 ms  DeleteObjects: 0.008684 ms)
-
-[Singleton] Using instance already created: PlayerMgr
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-I am the server
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Local Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 249.
+Total: 1.589200 ms (FindLiveObjects: 0.018552 ms CreateObjectMapping: 0.013815 ms MarkObjects: 1.540648 ms  DeleteObjects: 0.015789 ms)
 
 Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
@@ -207,22 +129,66 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.623937 ms
+UnloadTime: 1.937356 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2980 -> priority: 1 
-UnloadTime: 0.254998 ms
+  Thread -> id: 2a0c -> priority: 1 
+UnloadTime: 0.261708 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 247.
-Total: 0.633548 ms (FindLiveObjects: 0.025657 ms CreateObjectMapping: 0.011842 ms MarkObjects: 0.586575 ms  DeleteObjects: 0.008684 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 249.
+Total: 5.491150 ms (FindLiveObjects: 0.026447 ms CreateObjectMapping: 0.016973 ms MarkObjects: 5.432729 ms  DeleteObjects: 0.014210 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.260524 ms
+UnloadTime: 0.268814 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 324.
-Total: 0.281050 ms (FindLiveObjects: 0.025263 ms CreateObjectMapping: 0.016578 ms MarkObjects: 0.229340 ms  DeleteObjects: 0.009473 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 320.
+Total: 0.298813 ms (FindLiveObjects: 0.045394 ms CreateObjectMapping: 0.016973 ms MarkObjects: 0.225788 ms  DeleteObjects: 0.009078 ms)
 
-[Singleton] Using instance already created: PlayerMgr
+[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+I am the server
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Local Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.245919 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 320.
+Total: 0.306708 ms (FindLiveObjects: 0.032368 ms CreateObjectMapping: 0.018947 ms MarkObjects: 0.244340 ms  DeleteObjects: 0.009868 ms)
+
+[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+I am the server
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Local Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.253419 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 320.
+Total: 0.298024 ms (FindLiveObjects: 0.040657 ms CreateObjectMapping: 0.017368 ms MarkObjects: 0.229735 ms  DeleteObjects: 0.009078 ms)
+
+[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -246,9 +212,44 @@ Remote Player
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+Local Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.253814 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 320.
+Total: 0.314208 ms (FindLiveObjects: 0.049341 ms CreateObjectMapping: 0.017763 ms MarkObjects: 0.236840 ms  DeleteObjects: 0.009078 ms)
+
+[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+I am the server
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Remote Player
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Remote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.genUcloading 3 Unused Serialized files (Serialized files npp loaded: 0)
+em
+ote Player
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/rRntimee PlayB
+nd
+in
+gs.gen.cpp C:/build1)
+
+ve/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Remote Player
  
@@ -258,10 +259,143 @@ Local Player
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Log: connection {3} has been disconnected by timeout; address {::ffff:192.168.1.59:62865}
+UUnloadnngl3oUnusegd  Snusee Serialrzed filed (Snresd ngSi aluildezeri flslenso n lowa(oa:dial
+ized
+ files now loaded: 0)
+UnloadTime: 10.463223 ms
+UnloadTime: 6.323250 ms
+UnloadTime: 6.321671 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 350.
+Total: 0.437760 ms (FindLiveObjects: 0.031578 ms CreateObjectMapping: 0.016184 ms MarkObjects: 0.380523 ms  DeleteObjects: 0.008289 ms)
+
+UnloadTime: 7.649952 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 350.
+Total: 0.431839 ms (FindLiveObjects: 0.054078 ms CreateObjectMapping: 0.023684 ms MarkObjects: 0.345392 ms  DeleteObjects: 0.007105 ms)
+
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 350.
+Total: 0.640653 ms (FindLiveObjects: 0.144472 ms CreateObjectMapping: 0.024473 ms MarkObjects: 0.400260 ms  DeleteObjects: 0.070657 ms)
+
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 350.
+Total: 0.549470 ms (FindLiveObjects: 0.040262 ms CreateObjectMapping: 0.024868 ms MarkObjects: 0.472497 ms  DeleteObjects: 0.011447 ms)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.Component.GetComponent[NetworkIdentity] () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_myView () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_isLocalPlayer () [0x00000] in <filename unknown>:0 
+  at PlayerMgr.GetMyPlayer () [0x00000] in <filename unknown>:0 
+  at UIManagerScript.ChoseRadio () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.Component.GetComponent[NetworkIdentity] () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_myView () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_isLocalPlayer () [0x00000] in <filename unknown>:0 
+  at PlayerMgr.GetMyPlayer () [0x00000] in <filename unknown>:0 
+  at UIManagerScript.ChosePilot () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.Component.GetComponent[NetworkIdentity] () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_myView () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_isLocalPlayer () [0x00000] in <filename unknown>:0 
+  at PlayerMgr.GetMyPlayer () [0x00000] in <filename unknown>:0 
+  at UIManagerScript.ChoseEngine () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.Component.GetComponent[NetworkIdentity] () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_myView () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkBehaviour.get_isLocalPlayer () [0x00000] in <filename unknown>:0 
+  at PlayerMgr.GetMyPlayer () [0x00000] in <filename unknown>:0 
+  at UIManagerScript.ChoseBedroom () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
 Log: connection {1} has been disconnected by timeout; address {::ffff:192.168.1.59:7777}
 ClientDisconnected due to error: Timeout
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Log: connection {1} has been disconnected by timeout; address {::ffff:192.168.1.59:7777}

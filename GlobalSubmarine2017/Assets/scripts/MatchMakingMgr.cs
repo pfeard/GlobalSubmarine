@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class MatchMakingMgr : NetworkBehaviour {
+public class MatchMakingMgr : MonoBehaviour {
 
     public UnityEngine.UI.Image[] m_Leds;
 
@@ -29,6 +30,7 @@ public class MatchMakingMgr : NetworkBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        	
+        if (PlayerMgr.Instance.GetPlayerCount() == 4)
+            SceneManager.LoadScene("SelectPost");
 	}
 }

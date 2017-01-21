@@ -10,6 +10,7 @@ public class PlayerMgr : Singleton<PlayerMgr>
     protected PlayerMgr()
     {
         m_POk = new UnityEngine.UI.Image[4];
+        m_Players = new List<PlayerBehavior>();
     }
     
     public void AddPlayer(PlayerBehavior player)

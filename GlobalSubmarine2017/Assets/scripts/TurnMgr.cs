@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnMgr : MonoBehaviour
+public class TurnMgr : Singleton<TurnMgr>
 {
     enum EActivities
     {
