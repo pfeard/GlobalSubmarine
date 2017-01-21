@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Script de l'écran titre
@@ -25,7 +26,8 @@ public class MenuScript : MonoBehaviour
     )
 	{
 		PlayerPrefs.SetString("IsHost", "True");
-		Application.LoadLevel("Salon");
+
+        SceneManager.LoadScene("Lobby");
 		
 	}
 	//Affiche un bouton pour rejoindre une partie
@@ -43,7 +45,7 @@ public class MenuScript : MonoBehaviour
     )
     {
 		PlayerPrefs.SetString("IsHost", "False");
-		Application.LoadLevel("Salon");
+        SceneManager.LoadScene("Lobby");
     }
   }
 }
