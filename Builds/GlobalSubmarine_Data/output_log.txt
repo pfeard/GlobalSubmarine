@@ -17,68 +17,11 @@ Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Ne
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.032 seconds
+- Completed reload, in  0.045 seconds
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.369728 ms
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2ae0 -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.251445 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 302.
-Total: 0.267629 ms (FindLiveObjects: 0.039078 ms CreateObjectMapping: 0.015789 ms MarkObjects: 0.203288 ms  DeleteObjects: 0.008684 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.905502 ms
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 323.
-Total: 0.275524 ms (FindLiveObjects: 0.024868 ms CreateObjectMapping: 0.016973 ms MarkObjects: 0.225393 ms  DeleteObjects: 0.007499 ms)
-
-[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at (wrapper stelemref) object:stelemref (object,intptr,object)
-  at MatchMakingMgr.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-I am the server
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Local Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-I am the server
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-I am the server
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Remote Player
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Log: connection {2} has been disconnected by timeout; address {::ffff:192.168.1.59:49643}
-ServerDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-[Singleton] Instance 'PlayerMgr' already destroyed on application quit. Won't create again - returning null.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
+UnloadTime: 1.641700 ms

@@ -64,7 +64,7 @@ public class TurnMgr : Singleton<TurnMgr>
     }
 	
 	// Update is called once per frame
-	void Update ()
+	public void Update ()
     {
 		if (PlayerMgr.Instance && PlayerMgr.Instance.GetMyPlayer())
         {
