@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMgr : Singleton<PlayerMgr>
 {
-    static int sPlayerCount = 3;
+    public static int sPlayerCount = 3;
     public List<PlayerBehavior> m_Players;
     public UnityEngine.UI.Image[] m_POk;
 

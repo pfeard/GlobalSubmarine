@@ -23,14 +23,14 @@ public class MatchMakingMgr : MonoBehaviour {
             NetworkManager.singleton.StartClient();
         }
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < PlayerMgr.sPlayerCount; i++)
             PlayerMgr.Instance.m_POk[i] = m_Leds[i];
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (PlayerMgr.Instance.GetPlayerCount() == 4)
+        if (PlayerMgr.Instance.GetPlayerCount() == PlayerMgr.sPlayerCount)
             SceneManager.LoadScene("SelectPost");
 	}
 }
