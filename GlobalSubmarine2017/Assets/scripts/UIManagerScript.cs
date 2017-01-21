@@ -20,6 +20,7 @@ public class UIManagerScript : MonoBehaviour {
 	
 	public void ChooseRadar() 
 	{
+		textBox.SetActive(false);
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player.m_CurrentActivity = 0;
 		player.m_CurrentState = 0;
@@ -28,6 +29,7 @@ public class UIManagerScript : MonoBehaviour {
 	}
 	public void ChoosePilot() 
 	{
+		textBox.SetActive(false);
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player.m_CurrentActivity = 1;
 		player.m_CurrentState = 0;
@@ -36,6 +38,7 @@ public class UIManagerScript : MonoBehaviour {
 	}
 	public void ChooseEngine() 
 	{
+		textBox.SetActive(false);
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player.m_CurrentActivity = 2;
 		player.m_CurrentState = 0;
