@@ -17,5 +17,9 @@ public class GameManager : MonoBehaviour {
         {
             TurnMgr.Instance.Update();
         }
+		if (SubmarineMgr.Instance)
+		{
+			SubmarineMgr.Instance.Update();
+		}
 	}
 }

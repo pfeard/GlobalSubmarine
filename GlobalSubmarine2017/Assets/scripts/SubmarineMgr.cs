@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SubmarineMgr : Singleton<SubmarineMgr>
 {
+	float rulerChangeCooldown = 4.0f;
+	float currentRulerCountdown = 0.0f;
 	private float m_Temperature;
 	public float Temperature
 	{
@@ -89,44 +91,130 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		}
 	}
 	
-	private int m_info1;
-	public int info1
+	private int m_Info1;
+	public int Info1
 	{
-		get{return m_info1;}
+		get{return m_Info1;}
 		set
 		{
-			if(value!=m_info1)
+			if(value!=m_Info1)
 			{
-				m_info1 = value;
+				m_Info1 = value;
 				DispatchInfo1();
 			}
 		}
 	}
 	
-	private int m_info2;
-	public int info2
+	private int m_Info2;
+	public int Info2
 	{
-		get{return m_info2;}
+		get{return m_Info2;}
 		set
 		{
-			if(value!=m_info2)
+			if(value!=m_Info2)
 			{
-				m_info2 = value;
+				m_Info2 = value;
 				DispatchInfo2();
 			}
 		}
 	}
 	
-	private int m_info3;
-	public int info3
+	private int m_Info3;
+	public int Info3
 	{
-		get{return m_info3;}
+		get{return m_Info3;}
 		set
 		{
-			if(value!=m_info3)
+			if(value!=m_Info3)
 			{
-				m_info3 = value;
+				m_Info3 = value;
 				DispatchInfo3();
+			}
+		}
+	}
+	
+	bool IsServer()
+    {
+        if (PlayerMgr.Instance && PlayerMgr.Instance.GetMyPlayer())
+        {
+            if (PlayerMgr.Instance.GetMyPlayer().isServer)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+	
+	public void Update(){
+		if (!IsServer())
+			return;
+		
+		float thermometerDirection = 1.0f;
+		if(Info1 == Controller1 || Controller1 == -1)
+		{
+			thermometerDirection = 1.0f;
+		} else 
+		{
+			thermometerDirection = -1.0f;
+		}
+		Temperature += thermometerDirection * Time.deltaTime;
+
+		float sonarDirection = 1.0f;
+		if(Info2 == Controller2)
+		{
+			sonarDirection = 1.0f;
+		} else 
+		{
+			sonarDirection = -1.0f;
+		}
+		Direction += sonarDirection * Time.deltaTime;
+
+		float pressureDirection = 1.0f;
+		if(Info3 == Controller3)
+		{
+			pressureDirection = 1.0f;
+		} else 
+		{
+			pressureDirection = -1.0f;
+		}
+		Pressure += pressureDirection * Time.deltaTime;
+		
+		currentRulerCountdown -= Time.deltaTime;
+		
+		if(currentRulerCountdown <= 0.0f)
+		{
+			currentRulerCountdown = Random.Range(0.0f, rulerChangeCooldown);
+			Debug.Log("Rules changed! next change in:"+currentRulerCountdown);
+
+			//Randomly pick one of the ruler and reverse its state
+			//(but don't change those who are problematic at the moment,
+			//so that the problem don't fix themselves)
+			int pick = Mathf.FloorToInt(Random.Range(0.0f, 2.99f));
+			switch(pick)
+			{
+					case 0:
+					//Sonar is doing fine... Let's fuck it up.
+					if(sonarDirection < 0.0f)
+					{
+						Info2 = Info2==1?0:1;
+					}
+
+					break;
+					case 1:
+					//Thermometer is doing fine... Let's fuck it up.
+					if(thermometerDirection < 0.0f)
+					{
+						Info1 = Info1==1?0:1;
+					}
+					break;
+					case 2:
+					//Pressure is doing fine... Let's fuck it up.
+					if(pressureDirection < 0.0f)
+					{
+						Info3 = Info3==1?0:1;
+					}
+					break;
 			}
 		}
 	}
@@ -184,7 +272,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			
+			player.SetRulerValue("Info1",m_Info1);
 		}
 	}
 	
@@ -192,7 +280,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			
+			player.SetRulerValue("Info2",m_Info2);
 		}
 	}
 	
@@ -200,7 +288,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			
+			player.SetRulerValue("Info3",m_Info3);
 		}
 	}
 }

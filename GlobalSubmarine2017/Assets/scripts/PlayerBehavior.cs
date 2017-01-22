@@ -31,6 +31,9 @@ public class PlayerBehavior : NetworkBehaviour
 	public delegate void setControllerValueDelegate(string controller, int value);
 	public setControllerValueDelegate _setControllerValue;
 	
+	public delegate void setInfoValueDelegate(string info, int value);
+	public setInfoValueDelegate _setInfoValue;
+	
 	/*public Dictionary<string, bool> buttons = new Dictionary<string, bool>();
 	public Dictionary<string, float> instruments = new Dictionary<string, float>();*/
 
@@ -155,6 +158,19 @@ public class PlayerBehavior : NetworkBehaviour
 		
 	}
 	
+	public void SetRulerValue(string info, int value)
+	{
+		RpcSetInfoValue(info, value);
+	}
+	[ClientRpc]
+	void RpcSetInfoValue(string info, int value)
+	{
+		if(_setInfoValue != null)
+		{
+			_setInfoValue(info, value);
+		}
+	}
+	
 	public void SetControllerValue(string controller, int value)
 	{
         CmdSetControllerValue(controller, value);
@@ -186,3 +202,4 @@ public class PlayerBehavior : NetworkBehaviour
 		}
 	}
 }
+
