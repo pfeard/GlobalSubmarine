@@ -25,9 +25,37 @@ Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\DOTween46.dll 
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\DOTween46.dll into Unity Child Domain
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\DOTween50.dll (this message is harmless)
 Loading C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\DOTween50.dll into Unity Child Domain
-- Completed reload, in  0.052 seconds
+- Completed reload, in  0.062 seconds
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Git\GGJ\Builds\GlobalSubmarine_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.635791 ms
+[Singleton] An instance of TurnMgr is needed in the scene, so '(singleton) TurnMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[Singleton] An instance of PlayerMgr is needed in the scene, so '(singleton) PlayerMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[Singleton] An instance of SubmarineMgr is needed in the scene, so '(singleton) SubmarineMgr (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 16c -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.253026 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 386.
+Total: 0.381316 ms (FindLiveObjects: 0.038289 ms CreateObjectMapping: 0.033157 ms MarkObjects: 0.298816 ms  DeleteObjects: 0.010657 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.795399 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 401.
+Total: 0.333553 ms (FindLiveObjects: 0.027631 ms CreateObjectMapping: 0.021710 ms MarkObjects: 0.267631 ms  DeleteObjects: 0.016184 ms)
+

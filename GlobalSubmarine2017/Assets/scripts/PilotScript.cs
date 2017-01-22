@@ -7,7 +7,7 @@ public class PilotScript : MonoBehaviour {
 	public ThermometerLevel thermometer;
 	public DirectionController directionController;
 	public DiveSpeedRuler diveSpeedRuler;
-	public PlayerBehavior player;
+	PlayerBehavior player;
 
 	// Use this for initialization
 	void Start () {

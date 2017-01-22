@@ -58,7 +58,6 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 			{
 				m_Controller1 = value;
 				DispatchController1();
-				Temperature = 1/(m_Controller1+1);
 			}
 		}
 	}
