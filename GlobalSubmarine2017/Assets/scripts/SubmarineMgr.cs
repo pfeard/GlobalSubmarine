@@ -14,8 +14,9 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			if(value!=m_Temperature)
 			{
-				m_Temperature = value;
-				DispatchTemperature();
+                //m_Temperature = value;
+                m_Temperature = Mathf.Clamp01(value);
+                DispatchTemperature();
 			}	
 		}
 	}	
@@ -28,8 +29,9 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			if(value!=m_Pressure)
 			{
-				m_Pressure = value;
-				DispatchPressure();
+                //m_Pressure = value;
+                m_Pressure = Mathf.Clamp01(value);
+                DispatchPressure();
 			}
 		}
 	}
@@ -42,7 +44,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			if(value!=m_Direction)
 			{
-				m_Direction = value;
+                m_Direction = Mathf.Clamp01(value);
+                //m_Direction = value;
 				DispatchDirection();
 			}
 		}
@@ -157,7 +160,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			thermometerDirection = -1.0f;
 		}
-		Temperature += thermometerDirection * Time.deltaTime;
+		Temperature += thermometerDirection * Time.deltaTime * 0.01f;
 
 		float sonarDirection = 1.0f;
 		if(Info2 == Controller2)
@@ -167,7 +170,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			sonarDirection = -1.0f;
 		}
-		Direction += sonarDirection * Time.deltaTime;
+		Direction += sonarDirection * Time.deltaTime * 0.01f;
 
 		float pressureDirection = 1.0f;
 		if(Info3 == Controller3)
@@ -177,9 +180,9 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			pressureDirection = -1.0f;
 		}
-		Pressure += pressureDirection * Time.deltaTime;
+		Pressure += pressureDirection * Time.deltaTime * 0.01f;
 		
-		currentRulerCountdown -= Time.deltaTime;
+		currentRulerCountdown -= Time.deltaTime * 0.1f;
 		
 		if(currentRulerCountdown <= 0.0f)
 		{
@@ -220,7 +223,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchTemperature()
 	{
-        Debug.Log("DispatchTemperature");
+        //Debug.Log("DispatchTemperature");
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInstrumentValue("Thermometer", m_Temperature);
@@ -230,7 +233,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchPressure()
 	{
-        Debug.Log("DispatchPressure");
+        //Debug.Log("DispatchPressure");
         foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInstrumentValue("Pressure", m_Pressure);
@@ -239,10 +242,10 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchDirection()
 	{
-        Debug.Log("DispatchDirection");
+        //Debug.Log("DispatchDirection");
         foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			player.SetInstrumentValue("Direction", m_Direction);
+			player.SetInstrumentValue("Radar", m_Direction);
 		}
 	}
 	

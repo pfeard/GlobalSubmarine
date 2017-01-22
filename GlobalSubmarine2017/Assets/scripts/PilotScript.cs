@@ -20,11 +20,11 @@ public class PilotScript : MonoBehaviour {
 	}
 	
 	
-	public void Toggle(bool toggle)
+	/*public void Toggle(bool toggle)
 	{
 		player = PlayerMgr.Instance.GetMyPlayer();
 		//player.changeButton("Toggle",toggle);
-	}
+	}*/
 	
 	void setInstrumentValue(string instrument, float value )
 	{

@@ -28,7 +28,7 @@ public class RadarScript : MonoBehaviour {
         if (previousDiveState != m_DiveController.currentState)
         {
             previousDiveState = m_DiveController.currentState;
-            player.CmdSetControllerValue("Controller1", m_DiveController.currentState);
+            player.CmdSetControllerValue("Controller3", m_DiveController.currentState);
         }
     }
 	

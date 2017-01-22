@@ -90,7 +90,7 @@ public class TurnMgr : Singleton<TurnMgr>
             {
                 m_TurnTime += Time.deltaTime;
 
-                if (m_TurnTime >= m_TurnDuration)
+                /*if (m_TurnTime >= m_TurnDuration)
                 {
                     m_TurnState = ETurnState.eStateWaitForPlayers;
 
@@ -98,7 +98,7 @@ public class TurnMgr : Singleton<TurnMgr>
                         m_Activities[i] = false;
 
                     PlayerMgr.Instance.EndTurn();
-                }
+                }*/
             }
         }
     }
