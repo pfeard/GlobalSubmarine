@@ -25,11 +25,11 @@ public class PlayerBehavior : NetworkBehaviour
     public delegate void onPostSelected(int PostId);
     public onPostSelected _onPostSelected;
 	
-	public delegate void setInstrumentValue(string instrument, float value);
-	public setInstrumentValue _setInstrumentValue;
+	public delegate void setInstrumentValueDelegate(string instrument, float value);
+	public setInstrumentValueDelegate _setInstrumentValue;
 	
-	public Dictionary<string, bool> buttons = new Dictionary<string, bool>();
-	public Dictionary<string, float> instruments = new Dictionary<string, float>();
+	/*public Dictionary<string, bool> buttons = new Dictionary<string, bool>();
+	public Dictionary<string, float> instruments = new Dictionary<string, float>();*/
 
     /*public delegate void Conflict();
 	public Conflict _Conflict;*/
@@ -129,7 +129,7 @@ public class PlayerBehavior : NetworkBehaviour
 	
 	public void SetInstrumentValue(string instrument, float value)
 	{
-		if(instruments.ContainsKey(instrument))
+        /*if(instruments.ContainsKey(instrument))
 		{
 			instruments[instrument]=value;
 			RpcSetInstrumentValue(instrument, value);
@@ -138,8 +138,10 @@ public class PlayerBehavior : NetworkBehaviour
 		{
 			instruments.Add(instrument, value);
 			RpcSetInstrumentValue(instrument, value);
-		}
-	}
+		}*/
+        RpcSetInstrumentValue(instrument, value);
+    }
+
 	[ClientRpc]
 	void RpcSetInstrumentValue(string instrument, float value)
 	{

@@ -9,6 +9,7 @@ public class RadarScript : MonoBehaviour {
 	public PlayerBehavior player;
 	public float IndicatorSonar;
 	public ToggleButton button;
+    SonarLevel m_Sonar;
 	
 	void Start () {
 		
@@ -20,13 +21,13 @@ public class RadarScript : MonoBehaviour {
 	public void Toggle(bool toggle)
 	{
 		player = PlayerMgr.Instance.GetMyPlayer();
-		player.buttons["Toggle"]=toggle;
-		player.changeButton("Toggle",toggle);
+		//player.buttons["Toggle"]=toggle;
+		//player.changeButton("Toggle",toggle);
 	}
 	
 	void setInstrumentValue(string instrument, float value )
 	{
-		sonar.level = value;
+        m_Sonar.level = value;
 	}
 	
 	

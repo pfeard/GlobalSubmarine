@@ -48,7 +48,7 @@ public class SegmentsDisplay : MonoBehaviour {
 		SetValue(currentValue);
 	}
 
-	void SetValue(string v)
+	public void SetValue(string v)
 	{
 		while(v.Length < digits.Length)
 		{

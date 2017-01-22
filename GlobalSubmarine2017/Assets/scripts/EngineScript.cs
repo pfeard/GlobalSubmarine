@@ -5,6 +5,7 @@ using UnityEngine;
 public class EngineScript : MonoBehaviour {
 	
 	public PlayerBehavior player;
+    public NeedleMeter m_Barometer;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,6 @@ public class EngineScript : MonoBehaviour {
 	
 	void setInstrumentValue(string instrument, float value )
 	{
-		barometer.level = value;
+        m_Barometer.level = value;
 	}
 }

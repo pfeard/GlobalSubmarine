@@ -8,6 +8,7 @@ public class LEDLight : MonoBehaviour {
 	public Image bgImage;
 	public Color lightColorOn;
 	public Color bgColorOn;
+	public Color lightColorOff;
 	public Color bgColorOff;
 
 	public bool _isOn;
@@ -29,13 +30,17 @@ public class LEDLight : MonoBehaviour {
 
 	void UpdateDisplay()
 	{
-		lightImage.gameObject.SetActive(isOn);
-		lightImage.color = lightColorOn;
+		lightImage.color = isOn?lightColorOn:lightColorOff;
 		bgImage.color = isOn?bgColorOn:bgColorOff;
 	}
 
 	public void Toggle()
 	{
 		isOn = !isOn;
+	}
+
+	public void Set(bool b)
+	{
+		isOn = b;
 	}
 }

@@ -136,7 +136,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			if(player.m_CurrentActivity == 1)
 			{
-				player.setInstrumentValue("Thermometer", m_Temperature);
+				player.SetInstrumentValue("Thermometer", m_Temperature);
 			}
 		}
 	}
@@ -148,7 +148,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			if(player.m_CurrentActivity == 2)
 			{
-				player.setInstrumentValue("Pressure", m_Pressure);
+				player.SetInstrumentValue("Pressure", m_Pressure);
 			}
 		}
 	}
@@ -159,7 +159,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 		{
 			if(player.m_CurrentActivity == 0)
 			{
-				player.setInstrumentValue("Direction", m_Direction);
+				player.SetInstrumentValue("Direction", m_Direction);
 			}
 		}
 	}

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class LEDMeter : MonoBehaviour {
 
-	public GameObject LEDPrefab;
 	public float _level; //0->1
 	public bool reversed;
 	public float level{
@@ -26,9 +25,6 @@ public class LEDMeter : MonoBehaviour {
 
 	void Update()
 	{
-		/*level += Random.Range(-1.0f, 1.0f)/10.0f;
-		level = Mathf.Clamp01(level);
-		UpdateDisplay();*/
 	}
 
 	public void SetRandomLevel()
