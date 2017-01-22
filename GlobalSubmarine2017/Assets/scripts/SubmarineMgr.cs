@@ -220,6 +220,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchTemperature()
 	{
+        Debug.Log("DispatchTemperature");
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInstrumentValue("Thermometer", m_Temperature);
@@ -229,7 +230,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchPressure()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchPressure");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInstrumentValue("Pressure", m_Pressure);
 		}
@@ -237,7 +239,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchDirection()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchDirection");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInstrumentValue("Direction", m_Direction);
 		}
@@ -245,7 +248,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchController1()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchController1");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetControllerValue("Controller1", m_Controller1);
 		}
@@ -253,7 +257,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchController2()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchController2");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetControllerValue("Controller2", m_Controller2);
 		}
@@ -261,7 +266,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchController3()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchController3");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetControllerValue("Controller3", m_Controller3);
 		}
@@ -269,7 +275,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchInfo1()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchInfo1");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInfoValue("Info1",m_Info1);
 		}
@@ -277,7 +284,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchInfo2()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchInfo2");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInfoValue("Info2",m_Info2);
 		}
@@ -285,7 +293,8 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	
 	void DispatchInfo3()
 	{
-		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
+        Debug.Log("DispatchInfo3");
+        foreach (PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
 			player.SetInfoValue("Info3",m_Info3);
 		}

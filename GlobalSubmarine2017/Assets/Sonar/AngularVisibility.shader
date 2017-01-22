@@ -30,7 +30,7 @@
 			{
 				float2 uv : TEXCOORD0;
 				float4 vertex : SV_POSITION;
-				float4 worldpos : TEXTCOORD0;
+				float4 worldpos : TEXCOORD1;
 			};
 
 			sampler2D _MainTex;

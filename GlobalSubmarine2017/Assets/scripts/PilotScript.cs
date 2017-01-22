@@ -9,12 +9,14 @@ public class PilotScript : MonoBehaviour {
 	public DiveSpeedRuler diveSpeedRuler;
 	PlayerBehavior player;
 
-	// Use this for initialization
-	void Start () {
+    int previousDirState;
+
+    // Use this for initialization
+    void Start () {
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player._setInstrumentValue = setInstrumentValue;
 		player._setInfoValue = setInfoValue;
-		player._setControllerValue = setControllerValue;
+		//player._setControllerValue = setControllerValue;
 	}
 	
 	
@@ -39,18 +41,27 @@ public class PilotScript : MonoBehaviour {
 			diveSpeedRuler.state = value;	
 		}
 	}
-	
-	void setControllerValue(string controller, int value )
+
+    private void Update()
+    {
+        if (previousDirState != directionController.currentState)
+        {
+            previousDirState = directionController.currentState;
+            player.CmdSetControllerValue("Controller2", directionController.currentState);
+        }
+    }
+
+    /*void setControllerValue(string controller, int value )
 	{
 		if(controller == "Controller2")
 		{
 			directionController.currentState = value;	
 		}
-	}
-	
-	public void OnClick()
+	}*/
+
+    /*public void OnClick()
 	{
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player.CmdSetControllerValue("Controller2",directionController.currentState);
-	}
+	}*/
 }
