@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PilotScript : MonoBehaviour {
 	
-	public MultiLEDMeter thermometer;
+	public ThermometerLevel thermometer;
 	public DirectionController directionController;
 	public DiveSpeedRuler diveSpeedRuler;
 	public PlayerBehavior player;
