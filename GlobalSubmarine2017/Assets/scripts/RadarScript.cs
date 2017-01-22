@@ -6,37 +6,46 @@ using UnityEngine;
 public class RadarScript : MonoBehaviour {
 
 	// Use this for initialization
-	public PlayerBehavior player;
-	public float IndicatorSonar;
-	public ToggleButton button;
-    SonarLevel m_Sonar;
-	
-	void Start () {
-		
+	PlayerBehavior player;
+
+    public SonarLevel m_SonarLevel;
+    public DiveController m_DiveController;
+    public CoolingAlarmRuler m_CoolingAlarmRuler;
+
+    int previousDiveState;
+
+    void Start ()
+    {
 		player = PlayerMgr.Instance.GetMyPlayer();
 		player._setInstrumentValue = setInstrumentValue;
-		
-	}
-	
-	public void Toggle(bool toggle)
-	{
-		player = PlayerMgr.Instance.GetMyPlayer();
-		if(toggle)
-		{
-			player.CmdSetControllerValue("Controller1",1);
-		}
-		else
-		{
-			player.CmdSetControllerValue("Controller1",0);
-		}
-		//player.buttons["Toggle"]=toggle;
-		//player.changeButton("Toggle",toggle);
-	}
+        player._setInfoValue = SetRulerValue;
+
+        previousDiveState = m_DiveController.currentState;
+    }
+
+    public void Update()
+    {
+        if (previousDiveState != m_DiveController.currentState)
+        {
+            previousDiveState = m_DiveController.currentState;
+            player.CmdSetControllerValue("Controller1", m_DiveController.currentState);
+        }
+    }
 	
 	void setInstrumentValue(string instrument, float value )
 	{
-        m_Sonar.level = value;
-	}
+        if (instrument == "Radar")
+            m_SonarLevel.level = value;
+        //m_Sonar.level = value;
+    }
+
+    void SetRulerValue(string ruler, int value)
+    {
+        if (ruler == "Info1")
+        {
+            m_CoolingAlarmRuler.state = value;
+        }
+    }
 	
 	
 }
