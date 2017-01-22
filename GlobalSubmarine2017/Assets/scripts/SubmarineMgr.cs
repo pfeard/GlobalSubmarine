@@ -272,7 +272,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			player.SetRulerValue("Info1",m_Info1);
+			player.SetInfoValue("Info1",m_Info1);
 		}
 	}
 	
@@ -280,7 +280,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			player.SetRulerValue("Info2",m_Info2);
+			player.SetInfoValue("Info2",m_Info2);
 		}
 	}
 	
@@ -288,7 +288,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			player.SetRulerValue("Info3",m_Info3);
+			player.SetInfoValue("Info3",m_Info3);
 		}
 	}
 }

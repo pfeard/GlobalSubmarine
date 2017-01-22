@@ -158,7 +158,7 @@ public class PlayerBehavior : NetworkBehaviour
 		
 	}
 	
-	public void SetRulerValue(string info, int value)
+	public void SetInfoValue(string info, int value)
 	{
 		RpcSetInfoValue(info, value);
 	}
