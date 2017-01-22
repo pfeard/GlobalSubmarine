@@ -162,6 +162,7 @@ public class PlayerBehavior : NetworkBehaviour
 	{
 		RpcSetInfoValue(info, value);
 	}
+
 	[ClientRpc]
 	void RpcSetInfoValue(string info, int value)
 	{
@@ -182,13 +183,16 @@ public class PlayerBehavior : NetworkBehaviour
 		switch(controller)
 		{
 			case "Controller1":
-				SubmarineMgr.Instance.Controller1 = value;
+                Debug.Log("CmdSetControllerValue Controller1");
+                SubmarineMgr.Instance.Controller1 = value;
 				break;
 			case "Controller2":
-				SubmarineMgr.Instance.Controller2 = value;
+                Debug.Log("CmdSetControllerValue Controller2");
+                SubmarineMgr.Instance.Controller2 = value;
 				break;
 			case "Controller3":
-				SubmarineMgr.Instance.Controller3 = value;
+                Debug.Log("CmdSetControllerValue Controller3");
+                SubmarineMgr.Instance.Controller3 = value;
 				break;
 		}
 		
