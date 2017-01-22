@@ -56,6 +56,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 			{
 				m_Controller1 = value;
 				DispatchController1();
+				Temperature = 1/(m_Controller1+1);
 			}
 		}
 	}
@@ -134,10 +135,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 1)
-			{
-				player.SetInstrumentValue("Thermometer", m_Temperature);
-			}
+			player.SetInstrumentValue("Thermometer", m_Temperature);
 		}
 	}
 	
@@ -146,10 +144,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 2)
-			{
-				player.SetInstrumentValue("Pressure", m_Pressure);
-			}
+			player.SetInstrumentValue("Pressure", m_Pressure);
 		}
 	}
 	
@@ -157,10 +152,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 0)
-			{
-				player.SetInstrumentValue("Direction", m_Direction);
-			}
+			player.SetInstrumentValue("Direction", m_Direction);
 		}
 	}
 	
@@ -168,10 +160,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 0)
-			{
-				//TODO send controller1 to player
-			}
+			player.SetControllerValue("Controller1", m_Controller1);
 		}
 	}
 	
@@ -179,10 +168,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 1)
-			{
-				//TODO send controller2 to player
-			}
+			player.SetControllerValue("Controller2", m_Controller2);
 		}
 	}
 	
@@ -190,10 +176,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 2)
-			{
-				//TODO send controller3 to player
-			}
+			player.SetControllerValue("Controller3", m_Controller3);
 		}
 	}
 	
@@ -201,10 +184,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 2)
-			{
-				//TODO send info1 to player
-			}
+			
 		}
 	}
 	
@@ -212,10 +192,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 0)
-			{
-				//TODO send info2 to player
-			}
+			
 		}
 	}
 	
@@ -223,10 +200,7 @@ public class SubmarineMgr : Singleton<SubmarineMgr>
 	{
 		foreach(PlayerBehavior player in PlayerMgr.Instance.m_Players)
 		{
-			if(player.m_CurrentActivity == 1)
-			{
-				//TODO send info3 to player
-			}
+			
 		}
 	}
 }

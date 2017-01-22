@@ -28,6 +28,9 @@ public class PlayerBehavior : NetworkBehaviour
 	public delegate void setInstrumentValueDelegate(string instrument, float value);
 	public setInstrumentValueDelegate _setInstrumentValue;
 	
+	public delegate void setControllerValueDelegate(string controller, int value);
+	public setControllerValueDelegate _setControllerValue;
+	
 	/*public Dictionary<string, bool> buttons = new Dictionary<string, bool>();
 	public Dictionary<string, float> instruments = new Dictionary<string, float>();*/
 
@@ -150,5 +153,35 @@ public class PlayerBehavior : NetworkBehaviour
 			_setInstrumentValue(instrument, value);
 		}
 		
+	}
+	
+	public void SetControllerValue(string controller, int value)
+	{
+		RpcSetInstrumentValue(controller, value);
+	}
+	[Command]
+	public void CmdSetControllerValue(string controller, int value)
+	{
+		switch(controller)
+		{
+			case "Controller1":
+				SubmarineMgr.Instance.Controller1 = value;
+				break;
+			case "Controller2":
+				SubmarineMgr.Instance.Controller2 = value;
+				break;
+			case "Controller3":
+				SubmarineMgr.Instance.Controller3 = value;
+				break;
+		}
+		
+	}
+	[ClientRpc]
+	void RpcSetControllerValue(string controller, int value)
+	{
+		if (_setControllerValue != null)
+		{
+			_setControllerValue(controller, value);
+		}
 	}
 }

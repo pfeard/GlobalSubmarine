@@ -21,6 +21,14 @@ public class RadarScript : MonoBehaviour {
 	public void Toggle(bool toggle)
 	{
 		player = PlayerMgr.Instance.GetMyPlayer();
+		if(toggle)
+		{
+			player.CmdSetControllerValue("Controller1",1);
+		}
+		else
+		{
+			player.CmdSetControllerValue("Controller1",0);
+		}
 		//player.buttons["Toggle"]=toggle;
 		//player.changeButton("Toggle",toggle);
 	}

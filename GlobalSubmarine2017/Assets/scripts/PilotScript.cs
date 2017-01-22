@@ -22,6 +22,9 @@ public class PilotScript : MonoBehaviour {
 	
 	void setInstrumentValue(string instrument, float value )
 	{
-		thermometer.level = value;
+		if(instrument == "Thermometer")
+		{
+			thermometer.level = value;	
+		}
 	}
 }
