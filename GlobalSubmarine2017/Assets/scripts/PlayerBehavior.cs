@@ -24,6 +24,12 @@ public class PlayerBehavior : NetworkBehaviour
 
     public delegate void onPostSelected(int PostId);
     public onPostSelected _onPostSelected;
+	
+	public delegate void setInstrumentValue(string instrument, float value);
+	public setInstrumentValue _setInstrumentValue;
+	
+	public Dictionary<string, bool> buttons = new Dictionary<string, bool>();
+	public Dictionary<string, float> instruments = new Dictionary<string, float>();
 
     /*public delegate void Conflict();
 	public Conflict _Conflict;*/
@@ -31,6 +37,10 @@ public class PlayerBehavior : NetworkBehaviour
     // Use this for initialization
     void Start ()
     {
+		/*buttons.Add("Toggle", false);
+		views.Add("Thermometer", 0);
+		views.Add("Sonar",0);*/
+		
         if (isServer)
         {
             Debug.Log("I am the server");
@@ -116,5 +126,27 @@ public class PlayerBehavior : NetworkBehaviour
             _onTurnEnd();
         }
     }
-
+	
+	public void SetInstrumentValue(string instrument, float value)
+	{
+		if(instruments.ContainsKey(instrument))
+		{
+			instruments[instrument]=value;
+			RpcSetInstrumentValue(instrument, value);
+		}
+		else
+		{
+			instruments.Add(instrument, value);
+			RpcSetInstrumentValue(instrument, value);
+		}
+	}
+	[ClientRpc]
+	void RpcSetInstrumentValue(string instrument, float value)
+	{
+		if (_setInstrumentValue != null)
+		{
+			_setInstrumentValue(instrument, value);
+		}
+		
+	}
 }

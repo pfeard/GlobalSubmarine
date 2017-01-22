@@ -94,6 +94,28 @@ public class PlayerMgr : Singleton<PlayerMgr>
             player.EndTurn();
         }
     }
+	
+	public void UpdateThermometer()
+	{
+		//Debug.Log("on test l'update");
+		foreach(PlayerBehavior player in m_Players)
+		{
+			if(player.m_CurrentActivity == 1)
+			{
+				//Debug.Log("on est sur le bon player"); Le problème viens d'après.
+				Debug.Log(player.buttons);
+				if(player.buttons["Toggle"])
+				{
+					Debug.Log("hey");
+					player.changeView("Thermometer", 1);
+				}
+				else
+				{
+					player.changeView("Thermometer", 0);
+				}
+			}
+		}
+	}
 
     /*public void CancelTurn()
     {
