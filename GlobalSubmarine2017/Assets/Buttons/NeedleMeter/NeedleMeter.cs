@@ -5,7 +5,7 @@ using DG.Tweening;
 public class NeedleMeter : MonoBehaviour {
 
 	public float _level;
-	public float level{
+	public float level {
 		get { return _level; }
 		set
 		{
@@ -23,6 +23,7 @@ public class NeedleMeter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		level = 0;
 		amplitude = maxAngle - minAngle;
 	}
 

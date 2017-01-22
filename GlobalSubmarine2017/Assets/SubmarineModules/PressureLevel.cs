@@ -7,7 +7,7 @@ public class PressureLevel : AbstractSubmarineLevel {
 
 	float maxCooldown = 2.0f;
 	float currentTimeout = 0.0f;
-	float targetMeterLevel;
+	float targetMeterLevel = 0.0f;
 
 	// Use this for initialization
 	void Start () {
