@@ -157,8 +157,9 @@ public class PlayerBehavior : NetworkBehaviour
 	
 	public void SetControllerValue(string controller, int value)
 	{
-		RpcSetInstrumentValue(controller, value);
+        CmdSetControllerValue(controller, value);
 	}
+
 	[Command]
 	public void CmdSetControllerValue(string controller, int value)
 	{
