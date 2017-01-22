@@ -6,11 +6,11 @@ public class PlayerMgr : Singleton<PlayerMgr>
 {
     public static int sPlayerCount = 3;
     public List<PlayerBehavior> m_Players;
-    public UnityEngine.UI.Image[] m_POk;
+    public LEDLight[] m_POk;
 
     protected PlayerMgr()
     {
-        m_POk = new UnityEngine.UI.Image[sPlayerCount];
+        m_POk = new LEDLight[sPlayerCount];
         m_Players = new List<PlayerBehavior>();
     }
     
@@ -22,7 +22,8 @@ public class PlayerMgr : Singleton<PlayerMgr>
         {
             if (m_POk[m_Players.Count - 1] != null)
             {
-                m_POk[m_Players.Count - 1].color = new Color(0.0f, 1.0f, 0.0f);
+                //m_POk[m_Players.Count - 1].color = new Color(0.0f, 1.0f, 0.0f);
+				m_POk[m_Players.Count - 1].Set(true);
             }
         }
     }
@@ -31,7 +32,8 @@ public class PlayerMgr : Singleton<PlayerMgr>
     {
         if (m_POk[m_Players.Count - 1] != null)
         {
-            m_POk[m_Players.Count - 1].color = new Color(1.0f, 0.0f, 0.0f);
+            //m_POk[m_Players.Count - 1].color = new Color(1.0f, 0.0f, 0.0f);
+			m_POk[m_Players.Count - 1].Set(false);
         }
 
         if (m_Players.Contains(player))

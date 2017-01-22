@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class MatchMakingMgr : MonoBehaviour {
 
-    public UnityEngine.UI.Image[] m_Leds;
+    public LEDLight[] m_Leds;
     public Text m_IpInfo;
 
 	// Use this for initialization
