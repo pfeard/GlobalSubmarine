@@ -42,6 +42,8 @@ public class MatchMakingMgr : MonoBehaviour {
 
     public void LeaveLobby()
     {
+        PlayerMgr.Instance.RemoveMe();
+
         if (PlayerPrefs.HasKey("IsHost"))
         {
             NetworkManager.singleton.StopHost();

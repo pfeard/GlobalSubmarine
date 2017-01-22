@@ -34,7 +34,20 @@ public class PlayerMgr : Singleton<PlayerMgr>
             m_POk[m_Players.Count - 1].color = new Color(1.0f, 0.0f, 0.0f);
         }
 
-        m_Players.Remove(player);
+        if (m_Players.Contains(player))
+            m_Players.Remove(player);
+    }
+
+    public void RemoveMe()
+    {
+        foreach (PlayerBehavior player in m_Players)
+        {
+            if (player && player.isLocalPlayer)
+            {
+                RemovePlayer(player);
+                Destroy(player);
+            }
+        }
     }
 
     public void ClearPlayers()
